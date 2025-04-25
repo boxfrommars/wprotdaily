@@ -78,3 +78,10 @@
     font-size: 0.9rem;
     color: #555;
   }
+
+  @media (max-width: 600px) {
+    .content {
+      column-count: 1;
+      column-gap: 1em;
+    }
+  }
