@@ -33,18 +33,28 @@
   }
 
   article {
-    margin-bottom: 2.5em;
-  }
-
-  article h2 {
-    font-size: 2rem;
-    margin-bottom: 0.4em;
+    border-bottom: 1px dashed #888;
+    padding-bottom: 1.5em;
+    margin-bottom: 2em;
   }
 
   article time {
-    font-style: italic;
+    /* font-style: italic; */
     font-size: 1rem;
     color: #555;
+  }
+  article time {
+    display: block;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
+    color: #444;
+  }
+
+  article h2 {
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4em;
   }
 
   .lead {
@@ -69,6 +79,14 @@
 
   .content p {
     text-align-last: left;
+  }
+
+  .content p:first-of-type::first-letter {
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    margin-right: 0.08em;
+    font-family: 'Old Standard TT', serif;
   }
 
   footer {
