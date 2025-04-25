@@ -85,3 +85,38 @@
       column-gap: 1em;
     }
   }
+
+.masthead {
+  text-align: center;
+  padding: 1.5em 0;
+  margin-bottom: 2em;
+  border-top: 3px double #000;
+  border-bottom: 3px double #000;
+}
+
+.masthead__inner {
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.masthead__title {
+  font-family: 'Old Standard TT', serif;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin: 0.2em 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0.2em 0;
+}
+
+.masthead__tagline {
+  font-family: Georgia, serif;
+  font-style: normal;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 0.5em;
+  color: #333;
+}
