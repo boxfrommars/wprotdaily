@@ -67,6 +67,7 @@
     column-count: 2;
     column-gap: 2em;
     text-align: justify;
+    margin-bottom: 1em;
   }
 
   .content p, .content ul {
@@ -133,4 +134,21 @@
   letter-spacing: 0.15em;
   margin-top: 0.5em;
   color: #333;
+}
+
+.quote-classic {
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+  border-left: 4px solid #000;
+  font-style: italic;
+  color: #333;
+  background: rgba(0,0,0,0.02);
+}
+.quote-classic,
+.quote-attrib,
+.pull-quote {
+  break-inside: avoid-column;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
 }
