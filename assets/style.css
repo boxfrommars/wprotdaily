@@ -194,14 +194,16 @@ audio::-webkit-media-controls-panel {
   background-color: #F2E6CE;
 }
 /* Кнопка Play — делаем её тёмнее */
-audio::-webkit-media-controls-play-button {
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
   filter: invert(0) brightness(0.5);
 }
 /* Остальные контролы чуть светлее */
-audio::-webkit-media-controls-mute-button,
+/* audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-volume-slider {
   filter: invert(0.8) brightness(1.2);
-}
+} */
 audio::-webkit-media-controls-timeline,
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
