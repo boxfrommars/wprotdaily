@@ -72,7 +72,8 @@ article h2 {
 
 .lead {
   font-style: italic;
-  margin-bottom: 1.2em;
+  /* margin-bottom: 1.2em; */
+  margin-bottom: 0;
   font-size: 1.125rem;
 }
 
@@ -161,4 +162,74 @@ article .ribbon span {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
   background: #D95528;
+}
+
+article > img {
+  width: 100%;
+}
+
+/* Audioplayer */
+
+.audio-player {
+  break-inside: avoid-column;
+  background: #F2E6CE;
+}
+.audio-player figcaption {
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5em;
+  display: block;
+  font-size: 0.9rem;
+  color: #444;
+}
+.audio-player audio {
+  width: 100%;
+  background: transparent;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Для Chrome и Safari */
+audio::-webkit-media-controls-panel {
+  background-color: #F2E6CE;
+}
+/* Кнопка Play — делаем её тёмнее */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+  filter: invert(0) brightness(0.5);
+}
+/* Остальные контролы чуть светлее */
+/* audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+  filter: invert(0.8) brightness(1.2);
+} */
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #444;
+}
+
+/* Для Firefox (ограниченно) */
+audio::-moz-range-track {
+  background: #ccc;
+}
+audio::-moz-range-thumb {
+  background: #444;
+}
+
+/* Можно добавить hover для кнопки Play */
+audio::-webkit-media-controls-play-button:hover {
+  filter: invert(0) brightness(0.7);
+}
+
+article.special .audio-player {
+  break-inside: avoid-column;
+  background: #CEE0E0;
+  /* Misty Teal */
+}
+
+article.special audio::-webkit-media-controls-panel {
+  background-color: #CEE0E0;
 }
