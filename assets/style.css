@@ -126,8 +126,6 @@ article .content blockquote {
 /* Special edition */
 article.special {
   position: relative;
-  background: #CEE0E0;
-  /* Misty Teal */
   padding: 1.2em 1.5em;
   margin: 2em 0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -224,12 +222,35 @@ audio::-webkit-media-controls-play-button:hover {
   filter: invert(0) brightness(0.7);
 }
 
-article.special .audio-player {
-  break-inside: avoid-column;
+
+article.special.teal {
   background: #CEE0E0;
   /* Misty Teal */
 }
 
-article.special audio::-webkit-media-controls-panel {
+article.special.teal .audio-player {
+  background: #CEE0E0;
+  /* Misty Teal */
+}
+
+article.special.teal audio::-webkit-media-controls-panel {
+  background-color: #CEE0E0;
+}
+
+
+
+article.special.pink {
+
+  background: #E8EAD8    ;
+  /* background: #E0D8D0   ; */
+  /* Misty Teal */
+}
+
+article.special.teal .audio-player {
+  background: #CEE0E0;
+  /* Misty Teal */
+}
+
+article.special.teal audio::-webkit-media-controls-panel {
   background-color: #CEE0E0;
 }
