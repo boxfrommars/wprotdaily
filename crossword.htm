@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>The Wprot Daily: Ежедневные заметки о стриме</title>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css?v=7">
+  <style>
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(23, 30px);
+      grid-template-rows: repeat(5, 30px);
+      gap: 0;
+    }
+
+    .cell {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #777;
+      position: relative;
+      background: transparent;
+      box-sizing: border-box;
+    }
+
+    .cell input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      background: transparent;
+      text-transform: uppercase;
+    }
+
+    .cell input:focus {
+      outline: 1px solid #66f;
+    }
+
+    .cell.black {
+      background: #777;
+    }
+
+    .number {
+      position: absolute;
+      top: 2px;
+      left: 3px;
+      font-size: 12px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Wprot Daily</h1>
+    <p class="tagline">Пока стример идёт на выход — мы идём в печать</p>
+  </header>
+
+  <main>
+    <article class="special pink">
+      <div class="ribbon"><span>спецвыпуск</span></div>
+      <time datetime="2025-04-30">30 апреля 2025</time>
+      <h2>Здесь будет заголовок</h2>
+      <p class="lead" style="margin-bottom: 1em;">
+        Здесь будет лид
+      </p>
+
+        <div class="grid" id="grid"></div>
+
+        <div class="clues">
+            <div class="horizontal-clues"></div>
+            <div class="vertical-clues"></div>
+        </div>
+    </article>
+  </main>
+
+  <script>
+    // Примерные данные — замените на gridData из .puz
+    const gridData = [
+      ["1", " ", " ", ".", ".", ".", ".", "2", " ", " "],
+      [" ", ".", " ", ".", "3", " ", " ", ".", ".", "."],
+      [" ", " ", " ", ".", ".", ".", " ", " ", " ", " "],
+      [" ", ".", ".", ".", ".", ".", ".", ".", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      ["4", " ", " ", ".", "5", " ", " ", " ", ".", "."],
+      // ... добавьте остальные строки
+    ];
+
+    const blackCell = ".";
+    const grid = document.getElementById("grid");
+
+    gridData.forEach((row, y) => {
+      row.forEach((cell, x) => {
+        const div = document.createElement("div");
+        div.classList.add("cell");
+
+        if (cell === blackCell) {
+          div.classList.add("black");
+        } else {
+          const input = document.createElement("input");
+          input.maxLength = 1;
+          div.appendChild(input);
+
+          if (!isNaN(cell) && cell !== " ") {
+            const number = document.createElement("div");
+            number.classList.add("number");
+            number.textContent = cell;
+            div.appendChild(number);
+          }
+        }
+
+        grid.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>
