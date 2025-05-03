@@ -201,6 +201,9 @@ article > img {
   font-size: 0.8em;
   font-variant: small-caps;
   color: #777;
+  border-bottom: 1px dashed #888;
+  padding-bottom: .5em;
+  margin-bottom: 2em;
 }
 
 /* Audioplayer */
