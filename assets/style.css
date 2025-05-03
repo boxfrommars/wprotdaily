@@ -68,6 +68,9 @@ article h2 {
   font-variant: small-caps;
   letter-spacing: 0.05em;
   margin-bottom: 0.4em;
+  font-weight: 400;
+
+  -webkit-text-stroke: 1px currentColor;
 }
 
 .lead {
