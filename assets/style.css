@@ -154,6 +154,13 @@ article .content blockquote {
   column-break-inside: avoid;
 }
 
+article .content ul {
+  break-inside: avoid-column;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+}
+
 /* Special edition */
 article.special {
   position: relative;
@@ -387,7 +394,7 @@ article.special.teal audio::-webkit-media-controls-panel {
   font-weight: bold;
   margin: 0.6em 0 0.5em;
 }
-.crossword-solution li {
+.crossword-solution .clues li {
   color: #777;
 }
 .responsive-video {
