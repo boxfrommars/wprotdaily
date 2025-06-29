@@ -144,6 +144,12 @@ article .content:first-of-type p:first-of-type::first-letter {
   font-family: 'Old Standard TT', serif;
 }
 
+.content:first-of-type .no-dropcap p:first-of-type::first-letter {
+  float: none;
+  font-size: inherit;
+  margin-right: 0;
+}
+
 article .content blockquote {
   margin: 1.5em 0;
   padding: 0.5em 1em;
